@@ -1,0 +1,274 @@
+{
+  "sim_sweep": {
+    "hand_tracks": 1,
+    "rows_after_preroll": 149,
+    "hand_coverage": 1.0,
+    "x_err_cm_median": 2.5157773395799277,
+    "x_err_cm_p90": 6.1129192795348555,
+    "y_err_cm_median": 0.9570162861188649,
+    "y_err_cm_p90": 2.701595874156531,
+    "seated_presence_detected": false
+  },
+  "sim_empty": {
+    "seed1": {
+      "hand_tracks": 0,
+      "seated_presence_detected": false
+    },
+    "seed2": {
+      "hand_tracks": 0,
+      "seated_presence_detected": false
+    },
+    "seed3": {
+      "hand_tracks": 0,
+      "seated_presence_detected": false
+    },
+    "seed4": {
+      "hand_tracks": 0,
+      "seated_presence_detected": false
+    },
+    "seed5": {
+      "hand_tracks": 0,
+      "seated_presence_detected": false
+    }
+  },
+  "sim_torso": {
+    "seed1": {
+      "hand_tracks": 0,
+      "seated_presence_detected": true,
+      "seated_presence_s": 0.0,
+      "seated_presence_static_xy_cm": [
+        [
+          -4.0,
+          50.0
+        ]
+      ],
+      "other_motion_segments": 0
+    },
+    "seed2": {
+      "hand_tracks": 0,
+      "seated_presence_detected": true,
+      "seated_presence_s": 0.0,
+      "seated_presence_static_xy_cm": [
+        [
+          -3.0,
+          50.0
+        ]
+      ],
+      "other_motion_segments": 0
+    },
+    "seed3": {
+      "hand_tracks": 2,
+      "seated_presence_detected": true,
+      "seated_presence_s": 0.0,
+      "seated_presence_static_xy_cm": [
+        [
+          -4.0,
+          50.0
+        ]
+      ],
+      "other_motion_segments": 0
+    }
+  },
+  "replay_phase4_v1_12s": {
+    "calibration": "quietest 2 s window 5.48-7.48 s (legacy capture, no pre-roll)",
+    "hand_tracks": 5,
+    "hand_rows": 186,
+    "hand_coverage": 0.6241610738255033,
+    "hand_x_cm": [
+      -36.608720269381294,
+      42.455701853986554
+    ],
+    "hand_y_cm": [
+      7.259956993339711,
+      51.8337338390353
+    ],
+    "hand_segments": [
+      {
+        "t_s": [
+          0.24,
+          3.8
+        ],
+        "duration_s": 3.56,
+        "excursion_cm": [
+          79.1,
+          45.9
+        ],
+        "mean_xy_cm": [
+          8.9,
+          32.7
+        ],
+        "start_y_cm": 17.0,
+        "median_speed_cm_s": 62.8
+      },
+      {
+        "t_s": [
+          4.04,
+          5.44
+        ],
+        "duration_s": 1.4,
+        "excursion_cm": [
+          49.3,
+          49.7
+        ],
+        "mean_xy_cm": [
+          14.7,
+          28.8
+        ],
+        "start_y_cm": 8.0,
+        "median_speed_cm_s": 69.1
+      },
+      {
+        "t_s": [
+          6.56,
+          7.12
+        ],
+        "duration_s": 0.56,
+        "excursion_cm": [
+          21.7,
+          14.1
+        ],
+        "mean_xy_cm": [
+          29.0,
+          10.5
+        ],
+        "start_y_cm": 8.0,
+        "median_speed_cm_s": 40.0
+      },
+      {
+        "t_s": [
+          8.28,
+          9.2
+        ],
+        "duration_s": 0.92,
+        "excursion_cm": [
+          16.4,
+          48.9
+        ],
+        "mean_xy_cm": [
+          -23.9,
+          20.0
+        ],
+        "start_y_cm": 8.0,
+        "median_speed_cm_s": 37.1
+      },
+      {
+        "t_s": [
+          9.32,
+          11.96
+        ],
+        "duration_s": 2.64,
+        "excursion_cm": [
+          57.4,
+          42.2
+        ],
+        "mean_xy_cm": [
+          -7.5,
+          40.6
+        ],
+        "start_y_cm": 18.0,
+        "median_speed_cm_s": 51.5
+      }
+    ],
+    "seated_presence_detected": false,
+    "seated_presence_s": 0.0,
+    "seated_presence_segments": [],
+    "seated_presence_static_xy_cm": [],
+    "seated_presence_micro_motion": [],
+    "other_motion_segments": [],
+    "static_reflectors_xy_cm": [
+      [
+        -15.0,
+        15.0
+      ],
+      [
+        -8.0,
+        20.0
+      ]
+    ]
+  },
+  "replay_phase4_library_baseline": {
+    "calibration": "quietest 2 s window 3.36-5.36 s (legacy capture, no pre-roll)",
+    "hand_tracks": 0,
+    "hand_rows": 0,
+    "hand_coverage": 0.0,
+    "hand_x_cm": null,
+    "hand_y_cm": null,
+    "hand_segments": [],
+    "seated_presence_detected": false,
+    "seated_presence_s": 0.0,
+    "seated_presence_segments": [],
+    "seated_presence_static_xy_cm": [],
+    "seated_presence_micro_motion": [],
+    "other_motion_segments": [
+      {
+        "t_s": [
+          0.04,
+          2.2
+        ],
+        "duration_s": 2.16,
+        "excursion_cm": [
+          55.6,
+          22.9
+        ],
+        "mean_xy_cm": [
+          0.9,
+          55.6
+        ],
+        "start_y_cm": 58.0,
+        "median_speed_cm_s": 54.0
+      },
+      {
+        "t_s": [
+          2.28,
+          3.76
+        ],
+        "duration_s": 1.48,
+        "excursion_cm": [
+          28.3,
+          33.3
+        ],
+        "mean_xy_cm": [
+          1.2,
+          52.2
+        ],
+        "start_y_cm": 58.0,
+        "median_speed_cm_s": 40.5
+      },
+      {
+        "t_s": [
+          5.36,
+          5.72
+        ],
+        "duration_s": 0.36,
+        "excursion_cm": [
+          10.2,
+          21.3
+        ],
+        "mean_xy_cm": [
+          -4.8,
+          31.7
+        ],
+        "start_y_cm": 24.0,
+        "median_speed_cm_s": 10.3
+      }
+    ],
+    "static_reflectors_xy_cm": [
+      [
+        -21.0,
+        11.0
+      ],
+      [
+        -17.0,
+        14.0
+      ],
+      [
+        -8.0,
+        20.0
+      ],
+      [
+        26.0,
+        12.0
+      ]
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+# SonarANE — keep the evidence (PNG dashboards, telemetry JSON, demo video), drop the bulk
+.venv/
+.bootstrap/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/settings.local.json
+.claude/*.json
+
+# compiled CoreML models are rebuilt by the benchmark scripts (kernel_tag check)
+artifacts/models/
+
+# raw captures: only the two the demo video replays are tracked
+artifacts/*.wav
+!artifacts/phase4_capture.wav
+!artifacts/respiration_capture.wav
+
+# scratch / tooling
+*.log
+.pytest_cache/
+.ipynb_checkpoints/

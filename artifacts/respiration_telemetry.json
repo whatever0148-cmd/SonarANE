@@ -1,0 +1,102 @@
+{
+  "source": "artifacts/respiration_capture.wav",
+  "timestamp": "2026-10-21T19:42:46",
+  "dsp": {
+    "f0": 18800.0,
+    "f1": 22300.0,
+    "chirps": 750,
+    "chirps_recorded": 693
+  },
+  "capture_attempts": [
+    {
+      "config": {
+        "tukey_alpha": 0.15,
+        "amp": 0.9
+      }
+    }
+  ],
+  "alignment": {
+    "latency_samples": 137938,
+    "latency_ms": 2873.7083333333335,
+    "period_fit_samples": 1919.995987643037,
+    "clock_drift_ppm": -2.0897692515120525,
+    "jitter_samples_rms": 4.138475536957506,
+    "peak_to_median_db": 46.719794885566905,
+    "frames_in_bounds": false
+  },
+  "audio": {
+    "saved_volume": "69",
+    "restored_volume": "69",
+    "test_volume": 75,
+    "rec_peak_dbfs": -15.7,
+    "lead_samples": 4800
+  },
+  "ne_range_conv": {
+    "bank_conv_device": "NeuralEngine",
+    "bank_total_ms": 10.048958996776491,
+    "rel_err_vs_fp64": 0.0002270690507116364
+  },
+  "respiration": {
+    "hold_window_s": [
+      1.44,
+      27.68
+    ],
+    "motion_bursts_s": [
+      [
+        1.0,
+        1.44
+      ],
+      [
+        1.52,
+        1.8800000000000001
+      ],
+      [
+        2.8000000000000003,
+        3.08
+      ],
+      [
+        5.24,
+        5.5200000000000005
+      ]
+    ],
+    "bin_cm": 22.05,
+    "target_level_db_re_direct": -29.715452383445474,
+    "window_s": 26.24,
+    "filter": "bandpass",
+    "bpm": 15.7470703125,
+    "bpm_from_peaks": 11.450381679389313,
+    "bpm_from_spectrum": 15.7470703125,
+    "cycles_observed": 6.88671875,
+    "confidence": "moderate: peak spacing disagrees",
+    "peak_to_peak_mm": 6.264989981976807,
+    "inhalation_peaks_s": [
+      1.44,
+      7.68,
+      14.64,
+      18.88,
+      22.36
+    ],
+    "bins_combined_cm": [
+      19.6,
+      22.05,
+      24.5
+    ],
+    "summed_amplitude_vs_centre_bin_db": 8.770036194958871,
+    "arc_centre_fit": false,
+    "arc_span_rad": 11.11094330807187,
+    "arc_radial_residual": 0.3892852466848733,
+    "clamped_steps": 9,
+    "clamped_fraction": 0.013740458015267175,
+    "amplitude_gated_steps": 45,
+    "max_phase_step_rad": 2.7355216425915057,
+    "unreferenced_peak_to_peak_mm": 6.261535729394167,
+    "static_reflector_cm": 203.35000000000002,
+    "static_reflector_coherence": 0.2945416818510713,
+    "static_reflector_jitter_mm_rms": {
+      "referenced": null,
+      "unreferenced": null
+    },
+    "lambda_mm": 16.690997566909978,
+    "rad_per_mm": 0.7528831373909066
+  }
+}

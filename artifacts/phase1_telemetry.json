@@ -1,0 +1,252 @@
+{
+  "phase": "SonarANE Phase 1",
+  "revision": "1b: 17.2-20.7 kHz, vol 75 / amp 0.9 / Tukey 0.15, [1,-2,1] MTI before NE range-FFT, CFAR 11 dB + continuity gate",
+  "timestamp": "2026-10-21T10:37:36",
+  "host": {
+    "machine": "MacBook Air M2",
+    "macos": "27.0.1",
+    "coremltools": "9.0"
+  },
+  "dsp": {
+    "fs": 48000,
+    "f0": 17200.0,
+    "f1": 20700.0,
+    "T_chirp_s": 0.04,
+    "C_in": 1920,
+    "C_out": 256,
+    "range_bins": 128,
+    "range_grid_cm": 2.45,
+    "range_res_cm": 4.9,
+    "max_range_cm": 311.15,
+    "weight_mb_fp16": 0.98304,
+    "flops_per_chirp": 983040
+  },
+  "audio": {
+    "mic": "MacBook Air Microphone",
+    "speaker": "MacBook Air Speakers",
+    "default_output": "MacBook Air Speakers",
+    "osascript_volume_targets_speaker": true,
+    "saved_volume": "63",
+    "saved_muted": "false",
+    "test_volume": 75,
+    "restored_volume": "63",
+    "tx_samples": 321600,
+    "lead_samples": 4800,
+    "announce": "Get a flat palm or book ready 20 centimeters from the screen. Starting in 3, 2, 1, move now",
+    "rec_peak_dbfs": -17.58036231994629
+  },
+  "capture_attempts": [
+    {
+      "config": {
+        "tukey_alpha": 0.15,
+        "amp": 0.9
+      },
+      "band_snr_db": 56.35,
+      "align_pmr_db": 44.07,
+      "gates": {
+        "snr": true,
+        "alignment": true,
+        "no_clip": true
+      }
+    }
+  ],
+  "spectrum": {
+    "band_snr_db": 56.35,
+    "band_vs_out_of_band_db": 46.62,
+    "band_power_dbfs": -65.28,
+    "noise_floor_dbfs": -121.62,
+    "noise_ref_seconds": 0.34
+  },
+  "alignment": {
+    "latency_samples": 5291,
+    "latency_ms": 110.229,
+    "period_fit_samples": 1920.002,
+    "clock_drift_ppm": 0.927,
+    "jitter_samples_rms": 0.196,
+    "peak_to_median_db": 44.066,
+    "frames_in_bounds": true
+  },
+  "range_doppler": {
+    "static_strongest_reflectors_cm": [
+      12.2,
+      22.1,
+      245.0
+    ],
+    "mti_direct_path_residual_db": -48.40587259259169,
+    "mti_floor_15_80cm_db": -43.9162107524287,
+    "dynamic_peak_range_cm": 26.950000000000003,
+    "cfar_threshold_db": 11.0,
+    "cfar_raw_detect_fraction": 0.722972972972973,
+    "continuity_gate": {
+      "min_run_chirps": 4,
+      "max_step_cm": 10.0
+    },
+    "hand_detect_fraction": 0.5743243243243243,
+    "track_segments": 6,
+    "longest_track_s": 0.72,
+    "hand_range_cm": {
+      "min": 18.375000000000004,
+      "median": 22.507482625567672,
+      "max": 37.042197360001595
+    },
+    "hand_range_uncorrected_cm": {
+      "min": 13.475000000000003,
+      "max": 42.875
+    },
+    "range_doppler_coupling_s": 0.21657142857142858,
+    "motion_snr_db": 22.91751699197786,
+    "near_motion_floor_db": -37.249137878592784,
+    "near_motion_peak_db": -6.15744930055974,
+    "far_field_dynamic_db": -35.819140384039216,
+    "range_rate_cm_s": {
+      "p95_abs": 41.215309139742644,
+      "max_approach": -60.00216408301896,
+      "max_recede": 42.26689151167388
+    },
+    "micro_doppler_shift_hz_p95": 45.541114180648584,
+    "phase_velocity_cm_s_median_abs": 6.9021525093943294,
+    "phase_velocity_unambiguous_cm_s": 11.312664907651715,
+    "fraction_range_rate_beyond_phase_ambiguity": 0.4
+  },
+  "ne_live_processing": {
+    "frames": 298,
+    "bank_size": 64,
+    "bank_conv_device": "NeuralEngine",
+    "bank_calls": 5,
+    "bank_total_ms": 3.93,
+    "bank_chirps_per_s": 75826.9719,
+    "single_conv_device": "CPU",
+    "single_total_ms": 34.8788,
+    "single_us_per_chirp": 117.0428,
+    "rel_err_vs_fp64": 0.0002,
+    "realtime_factor": 1526.7176
+  },
+  "benchmark_synthetic": {
+    "truth_cm": [
+      30.0,
+      75.0
+    ],
+    "recovered_cm": [
+      29.4,
+      75.95
+    ],
+    "by_batch": {
+      "S=1": {
+        "coreml_cpu_and_ne": {
+          "conv_device": "CPU",
+          "median_us": 60.3,
+          "chirps_per_s": 16586,
+          "rel_err_vs_fp64": 0.0183
+        },
+        "coreml_cpu_only": {
+          "conv_device": "CPU",
+          "median_us": 47.8,
+          "chirps_per_s": 20924,
+          "rel_err_vs_fp64": 0.0183
+        },
+        "numpy_gemm_fp32": {
+          "median_us": 7.9,
+          "chirps_per_s": 126984
+        },
+        "numpy_dechirp_fft": {
+          "median_us": 85.5,
+          "chirps_per_s": 11696
+        }
+      },
+      "S=8": {
+        "coreml_cpu_and_ne": {
+          "conv_device": "NeuralEngine",
+          "median_us": 166.7,
+          "chirps_per_s": 48000,
+          "rel_err_vs_fp64": 0.000258
+        },
+        "coreml_cpu_only": {
+          "conv_device": "CPU",
+          "median_us": 63.0,
+          "chirps_per_s": 126902,
+          "rel_err_vs_fp64": 0.0186
+        },
+        "numpy_gemm_fp32": {
+          "median_us": 48.2,
+          "chirps_per_s": 165803
+        },
+        "numpy_dechirp_fft": {
+          "median_us": 231.3,
+          "chirps_per_s": 34582
+        }
+      },
+      "S=64": {
+        "coreml_cpu_and_ne": {
+          "conv_device": "NeuralEngine",
+          "median_us": 218.3,
+          "chirps_per_s": 293186,
+          "rel_err_vs_fp64": 0.000224
+        },
+        "coreml_cpu_only": {
+          "conv_device": "CPU",
+          "median_us": 115.4,
+          "chirps_per_s": 554713,
+          "rel_err_vs_fp64": 0.0187
+        },
+        "numpy_gemm_fp32": {
+          "median_us": 64.8,
+          "chirps_per_s": 988417
+        },
+        "numpy_dechirp_fft": {
+          "median_us": 1350.3,
+          "chirps_per_s": 47398
+        }
+      },
+      "S=128": {
+        "coreml_cpu_and_ne": {
+          "conv_device": "CPU",
+          "median_us": 179.6,
+          "chirps_per_s": 712844,
+          "rel_err_vs_fp64": 0.0188
+        },
+        "coreml_cpu_only": {
+          "conv_device": "CPU",
+          "median_us": 183.1,
+          "chirps_per_s": 699136,
+          "rel_err_vs_fp64": 0.0188
+        },
+        "numpy_gemm_fp32": {
+          "median_us": 104.2,
+          "chirps_per_s": 1228313
+        },
+        "numpy_dechirp_fft": {
+          "median_us": 2681.4,
+          "chirps_per_s": 47736
+        }
+      },
+      "S=1024": {
+        "coreml_cpu_and_ne": {
+          "conv_device": "NeuralEngine",
+          "median_us": 1157.5,
+          "chirps_per_s": 884697,
+          "rel_err_vs_fp64": 0.000218
+        },
+        "coreml_cpu_only": {
+          "conv_device": "CPU",
+          "median_us": 1196.7,
+          "chirps_per_s": 855695,
+          "rel_err_vs_fp64": 0.0188
+        },
+        "numpy_gemm_fp32": {
+          "median_us": 732.3,
+          "chirps_per_s": 1398309
+        },
+        "numpy_dechirp_fft": {
+          "median_us": 22239.0,
+          "chirps_per_s": 46045
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "dashboard": "artifacts/phase1_ane_sonar_proof.png",
+    "telemetry": "artifacts/phase1_telemetry.json",
+    "capture_wav": "artifacts/phase1_capture.wav",
+    "benchmark": "artifacts/ane_benchmark.json"
+  }
+}

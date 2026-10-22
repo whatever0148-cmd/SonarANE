@@ -1,0 +1,874 @@
+{
+  "coremltools": "9.0",
+  "numpy": "2.5.4",
+  "dsp": {
+    "fs": 48000,
+    "f0": 18800.0,
+    "f1": 22300.0,
+    "T_chirp_s": 0.04,
+    "C_in": 1920,
+    "C_out": 256,
+    "range_bins": 128,
+    "range_grid_cm": 2.45,
+    "range_res_cm": 4.9,
+    "max_range_cm": 311.15,
+    "weight_mb_fp16": 0.98304,
+    "flops_per_chirp": 983040
+  },
+  "synthetic_truth_cm": [
+    30.0,
+    75.0
+  ],
+  "batches": {
+    "1": {
+      "shape_in": [
+        1,
+        1920,
+        1,
+        1
+      ],
+      "shape_out": [
+        1,
+        256,
+        1,
+        1
+      ],
+      "model": "artifacts/models/sonar_range_fft_S1.mlpackage",
+      "coreml": {
+        "CPU_AND_NE": {
+          "conv_device": "CPU",
+          "load_ms": 23.73562497086823,
+          "rel_err_vs_fp64": 0.01651698039412346,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "CPU",
+              "supported": [
+                "CPU",
+                "NeuralEngine"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 61.583,
+          "p10_us": 58.5,
+          "p90_us": 68.25829999999999,
+          "mean_us": 64.05491733333332,
+          "iters": 3000,
+          "chirps_per_s": 16238.247568322427
+        },
+        "CPU_ONLY": {
+          "conv_device": "CPU",
+          "load_ms": 10.999417048878968,
+          "rel_err_vs_fp64": 0.01651698039412346,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "CPU",
+              "supported": [
+                "CPU"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 47.75,
+          "p10_us": 46.166,
+          "p90_us": 53.3381,
+          "mean_us": 50.745898999999994,
+          "iters": 3000,
+          "chirps_per_s": 20942.408376963354
+        }
+      },
+      "numpy_gemm_fp32_accelerate": {
+        "median_us": 7.875,
+        "p10_us": 7.792,
+        "p90_us": 8.708,
+        "mean_us": 8.098657,
+        "iters": 3000,
+        "chirps_per_s": 126984.12698412698
+      },
+      "numpy_dechirp_fft": {
+        "median_us": 85.5,
+        "p10_us": 85.25,
+        "p90_us": 86.78340000000001,
+        "mean_us": 86.46708666666667,
+        "iters": 300,
+        "chirps_per_s": 11695.90643274854
+      }
+    },
+    "8": {
+      "shape_in": [
+        1,
+        1920,
+        1,
+        8
+      ],
+      "shape_out": [
+        1,
+        256,
+        1,
+        8
+      ],
+      "model": "artifacts/models/sonar_range_fft_S8.mlpackage",
+      "coreml": {
+        "CPU_AND_NE": {
+          "conv_device": "NeuralEngine",
+          "load_ms": 48.316125001292676,
+          "rel_err_vs_fp64": 0.00019843255610893886,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "NeuralEngine",
+              "supported": [
+                "CPU",
+                "NeuralEngine"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 150.792,
+          "p10_us": 138.6125,
+          "p90_us": 179.05870000000002,
+          "mean_us": 154.917581,
+          "iters": 2000,
+          "chirps_per_s": 53053.212372009126
+        },
+        "CPU_ONLY": {
+          "conv_device": "CPU",
+          "load_ms": 11.724084033630788,
+          "rel_err_vs_fp64": 0.017561454983327146,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "CPU",
+              "supported": [
+                "CPU"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 62.917,
+          "p10_us": 60.8709,
+          "p90_us": 64.708,
+          "mean_us": 63.043907999999995,
+          "iters": 2000,
+          "chirps_per_s": 127151.64422969945
+        }
+      },
+      "numpy_gemm_fp32_accelerate": {
+        "median_us": 48.333,
+        "p10_us": 48.167,
+        "p90_us": 48.708,
+        "mean_us": 48.29080749999999,
+        "iters": 2000,
+        "chirps_per_s": 165518.38288539922
+      },
+      "numpy_dechirp_fft": {
+        "median_us": 221.959,
+        "p10_us": 221.625,
+        "p90_us": 231.56700000000006,
+        "mean_us": 224.32290999999998,
+        "iters": 300,
+        "chirps_per_s": 36042.69256934839
+      }
+    },
+    "64": {
+      "shape_in": [
+        1,
+        1920,
+        1,
+        64
+      ],
+      "shape_out": [
+        1,
+        256,
+        1,
+        64
+      ],
+      "model": "artifacts/models/sonar_range_fft_S64.mlpackage",
+      "coreml": {
+        "CPU_AND_NE": {
+          "conv_device": "NeuralEngine",
+          "load_ms": 46.07954196399078,
+          "rel_err_vs_fp64": 0.0002034640945499684,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "NeuralEngine",
+              "supported": [
+                "CPU",
+                "NeuralEngine"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 204.04149999999998,
+          "p10_us": 188.1167,
+          "p90_us": 240.73780000000002,
+          "mean_us": 208.92058000000003,
+          "iters": 1000,
+          "chirps_per_s": 313661.68156968075
+        },
+        "CPU_ONLY": {
+          "conv_device": "CPU",
+          "load_ms": 11.209124990273267,
+          "rel_err_vs_fp64": 0.0176988736957592,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "CPU",
+              "supported": [
+                "CPU"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 110.458,
+          "p10_us": 108.833,
+          "p90_us": 117.8422,
+          "mean_us": 112.17464199999999,
+          "iters": 1000,
+          "chirps_per_s": 579405.7469807529
+        }
+      },
+      "numpy_gemm_fp32_accelerate": {
+        "median_us": 64.834,
+        "p10_us": 64.75,
+        "p90_us": 65.875,
+        "mean_us": 65.139234,
+        "iters": 1000,
+        "chirps_per_s": 987136.3790603696
+      },
+      "numpy_dechirp_fft": {
+        "median_us": 1326.146,
+        "p10_us": 1313.875,
+        "p90_us": 1359.9,
+        "mean_us": 1330.7834866666667,
+        "iters": 300,
+        "chirps_per_s": 48260.146318731124
+      }
+    },
+    "128": {
+      "shape_in": [
+        1,
+        1920,
+        1,
+        128
+      ],
+      "shape_out": [
+        1,
+        256,
+        1,
+        128
+      ],
+      "model": "artifacts/models/sonar_range_fft_S128.mlpackage",
+      "coreml": {
+        "CPU_AND_NE": {
+          "conv_device": "CPU",
+          "load_ms": 19.913958036340773,
+          "rel_err_vs_fp64": 0.017647852616277878,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "CPU",
+              "supported": [
+                "CPU",
+                "NeuralEngine"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 179.0,
+          "p10_us": 178.334,
+          "p90_us": 187.0461,
+          "mean_us": 181.055416,
+          "iters": 1000,
+          "chirps_per_s": 715083.7988826816
+        },
+        "CPU_ONLY": {
+          "conv_device": "CPU",
+          "load_ms": 10.563332994934171,
+          "rel_err_vs_fp64": 0.017647852616277878,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "CPU",
+              "supported": [
+                "CPU"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 179.042,
+          "p10_us": 178.459,
+          "p90_us": 184.2911,
+          "mean_us": 180.59113799999997,
+          "iters": 1000,
+          "chirps_per_s": 714916.0532165638
+        }
+      },
+      "numpy_gemm_fp32_accelerate": {
+        "median_us": 103.708,
+        "p10_us": 103.583,
+        "p90_us": 104.458,
+        "mean_us": 103.980671,
+        "iters": 1000,
+        "chirps_per_s": 1234234.5817101863
+      },
+      "numpy_dechirp_fft": {
+        "median_us": 2622.2290000000003,
+        "p10_us": 2576.3288000000002,
+        "p90_us": 2943.345500000001,
+        "mean_us": 2701.96956,
+        "iters": 300,
+        "chirps_per_s": 48813.43315171939
+      }
+    },
+    "1024": {
+      "shape_in": [
+        1,
+        1920,
+        1,
+        1024
+      ],
+      "shape_out": [
+        1,
+        256,
+        1,
+        1024
+      ],
+      "model": "artifacts/models/sonar_range_fft_S1024.mlpackage",
+      "coreml": {
+        "CPU_AND_NE": {
+          "conv_device": "NeuralEngine",
+          "load_ms": 45.648459054064006,
+          "rel_err_vs_fp64": 0.00021428607650691547,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "NeuralEngine",
+              "supported": [
+                "CPU",
+                "NeuralEngine"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 1101.042,
+          "p10_us": 1081.1336999999999,
+          "p90_us": 1150.3294999999998,
+          "mean_us": 1109.822525,
+          "iters": 200,
+          "chirps_per_s": 930028.1006537445
+        },
+        "CPU_ONLY": {
+          "conv_device": "CPU",
+          "load_ms": 13.752375030890107,
+          "rel_err_vs_fp64": 0.017729026559373032,
+          "synthetic_echo_peaks_cm": [
+            29.4,
+            75.95
+          ],
+          "compute_plan": [
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "const",
+              "preferred": null,
+              "supported": [],
+              "est_cost": null
+            },
+            {
+              "function": "main",
+              "op": "ios18.conv",
+              "preferred": "CPU",
+              "supported": [
+                "CPU"
+              ],
+              "est_cost": 1.0
+            }
+          ],
+          "median_us": 1174.6045,
+          "p10_us": 1162.5,
+          "p90_us": 1227.1663,
+          "mean_us": 1202.396045,
+          "iters": 200,
+          "chirps_per_s": 871782.8000829216
+        }
+      },
+      "numpy_gemm_fp32_accelerate": {
+        "median_us": 824.75,
+        "p10_us": 767.3964,
+        "p90_us": 957.367,
+        "mean_us": 844.58272,
+        "iters": 200,
+        "chirps_per_s": 1241588.360109124
+      },
+      "numpy_dechirp_fft": {
+        "median_us": 21757.104,
+        "p10_us": 21558.086900000002,
+        "p90_us": 23605.2208,
+        "mean_us": 22338.922919999997,
+        "iters": 200,
+        "chirps_per_s": 47065.08733882965
+      }
+    }
+  }
+}

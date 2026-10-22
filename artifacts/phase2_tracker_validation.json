@@ -1,0 +1,130 @@
+{
+  "17200-20700Hz": {
+    "sim_hand_-28dB": {
+      "coverage": 1.0,
+      "updated": 1.0,
+      "coasted": 0.0,
+      "segments": 1,
+      "updates_from_presence_path": 0.08108108108108109,
+      "range_rms_cm": 3.416546432437061,
+      "range_bias_cm": -0.014395518113185311,
+      "frac_err_gt_8cm": 0.0,
+      "pause_coverage": 1.0,
+      "pause_updated": 1.0
+    },
+    "sim_hand_-36dB": {
+      "coverage": 1.0,
+      "updated": 1.0,
+      "coasted": 0.0,
+      "segments": 1,
+      "updates_from_presence_path": 0.11486486486486487,
+      "range_rms_cm": 1.970339877439421,
+      "range_bias_cm": -0.0595386595870276,
+      "frac_err_gt_8cm": 0.0,
+      "pause_coverage": 1.0,
+      "pause_updated": 1.0
+    },
+    "sim_no_hand_seed1": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed2": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed3": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "phase1_wav_replay": {
+      "coverage": 0.8513513513513513,
+      "updated": 0.7027027027027027,
+      "coasted": 0.14864864864864866,
+      "segments": 2,
+      "updates_from_presence_path": 0.2403846153846154,
+      "range_cm": [
+        11.879810388130249,
+        21.919718149417477,
+        68.43279476078554
+      ]
+    }
+  },
+  "18800-22300Hz": {
+    "sim_hand_-28dB": {
+      "coverage": 1.0,
+      "updated": 1.0,
+      "coasted": 0.0,
+      "segments": 1,
+      "updates_from_presence_path": 0.02027027027027027,
+      "range_rms_cm": 4.162674324254472,
+      "range_bias_cm": -0.3977189627990417,
+      "frac_err_gt_8cm": 0.0,
+      "pause_coverage": 1.0,
+      "pause_updated": 1.0
+    },
+    "sim_hand_-36dB": {
+      "coverage": 1.0,
+      "updated": 1.0,
+      "coasted": 0.0,
+      "segments": 1,
+      "updates_from_presence_path": 0.17567567567567569,
+      "range_rms_cm": 2.6273491464158707,
+      "range_bias_cm": -0.5756987172372745,
+      "frac_err_gt_8cm": 0.0,
+      "pause_coverage": 1.0,
+      "pause_updated": 1.0
+    },
+    "sim_no_hand_seed1": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed2": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed3": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed4": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed5": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed6": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed7": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed8": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed9": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "sim_no_hand_seed10": {
+      "false_track_segments": 0,
+      "coverage": 0.0
+    },
+    "phase3_wav_replay": {
+      "coverage": 0.8716216216216216,
+      "updated": 0.7905405405405406,
+      "coasted": 0.08108108108108109,
+      "segments": 2,
+      "updates_from_presence_path": 0.27350427350427353,
+      "range_cm": [
+        21.15727809881986,
+        41.23534201459162,
+        74.1314686150067
+      ]
+    }
+  }
+}

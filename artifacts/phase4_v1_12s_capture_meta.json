@@ -1,0 +1,20 @@
+{
+  "tx_start_in": 665280,
+  "lead": 4800,
+  "audio": {
+    "mic": "MacBook Air Microphone",
+    "speaker": "MacBook Air Speakers",
+    "saved_volume": "31",
+    "restored_volume": "31",
+    "test_volume": 75,
+    "stream": "warm duplex (opened before the announcement)",
+    "callback_status_flags": 0,
+    "session_s": 30.72,
+    "rec_peak_dbfs": -5.167820930480957
+  },
+  "captured_at": "2026-10-21T22:15:18",
+  "seconds": 12.0,
+  "sweep_s": 6.0,
+  "n_pri": 300,
+  "protocol": "6 s sweep + 6 s hold (spoken cues, pre-library)"
+}

@@ -1,0 +1,382 @@
+{
+  "phase": "SonarANE Phase 3",
+  "source": "live capture (re-analysed)",
+  "captured_at": "2026-10-21T11:23:22",
+  "timestamp": "2026-10-21T19:42:26",
+  "host": {
+    "machine": "MacBook Air M2",
+    "macos": "27.0.1",
+    "coremltools": "9.0"
+  },
+  "dsp": {
+    "fs": 48000,
+    "f0": 18800.0,
+    "f1": 22300.0,
+    "T_chirp_s": 0.04,
+    "chirps": 200,
+    "range_res_cm": 4.9,
+    "range_grid_cm": 2.45,
+    "lambda_mm": 16.690997566909978
+  },
+  "protocol": {
+    "sweep_s": [
+      0.0,
+      4.0
+    ],
+    "hold_s": [
+      4.0,
+      8.0
+    ],
+    "respiration_window_from_s": 5.9,
+    "settle": "first 0.4 s with |v| < 5 cm/s after cue"
+  },
+  "audio": {
+    "mic": "MacBook Air Microphone",
+    "speaker": "MacBook Air Speakers",
+    "default_output": "MacBook Air Speakers",
+    "osascript_volume_targets_speaker": true,
+    "saved_volume": "56",
+    "saved_muted": "false",
+    "test_volume": 75,
+    "restored_volume": "56",
+    "tx_samples": 417600,
+    "lead_samples": 4800,
+    "announce": "Book or palm at 15 centimeters. Sweep out to 55 and back to 25, then hold still and breathe slowly. Starting in 3, 2, 1, move now",
+    "cue": {
+      "text": "Hold still and breathe",
+      "at_s": 4.0,
+      "peak": 0.07999999999999996,
+      "lowpass_hz": 8000
+    },
+    "chirps": 200,
+    "rec_peak_dbfs": -13.936100006103516
+  },
+  "capture_attempts": [
+    {
+      "config": {
+        "tukey_alpha": 0.15,
+        "amp": 0.9
+      },
+      "band_snr_db": 62.46,
+      "align_pmr_db": 49.29,
+      "gates": {
+        "snr": true,
+        "alignment": true,
+        "no_clip": true
+      }
+    }
+  ],
+  "spectrum": {
+    "band_snr_db": 62.46,
+    "band_vs_out_of_band_db": 54.14,
+    "band_power_dbfs": -59.33,
+    "noise_floor_dbfs": -121.79,
+    "noise_ref_seconds": 0.35
+  },
+  "alignment": {
+    "latency_samples": 4623,
+    "latency_ms": 96.312,
+    "period_fit_samples": 1920.012,
+    "clock_drift_ppm": 6.501,
+    "jitter_samples_rms": 0.304,
+    "peak_to_median_db": 49.286,
+    "frames_in_bounds": true
+  },
+  "tracking": {
+    "static_strongest_reflectors_cm": [
+      17.2,
+      245.0,
+      51.5
+    ],
+    "mti_direct_path_residual_db": -50.58325049521955,
+    "mti_floor_15_80cm_db": -55.52907870312001,
+    "presence_direct_path_residual_db": -47.20777128941365,
+    "presence_floor_15_80cm_db": -42.336301131063664,
+    "cfar_threshold_db": {
+      "near_db": 11.0,
+      "far_db": 8.0,
+      "taper_cm": [
+        35.0,
+        75.0
+      ],
+      "far_confirmation_chirps": 6,
+      "near_confirmation_chirps": 4
+    },
+    "chirps_with_candidates": 0.9191919191919192,
+    "track_coverage": 1.0,
+    "track_updated": 0.8232323232323232,
+    "track_coasted": 0.17676767676767677,
+    "track_segments": 1,
+    "longest_segment_s": 7.92,
+    "updates_from_presence_path": 0.31901840490797545,
+    "zero_velocity_hold_s": 1.16,
+    "zero_velocity_updates_from_presence_path": 0.5172413793103449,
+    "motion_or_presence_snr_db": 13.62411112775526,
+    "hand_range_cm": {
+      "min": 3.2951465319958047,
+      "median": 27.604920584630484,
+      "max": 70.62629015721777
+    },
+    "range_rate_cm_s": {
+      "p95_abs": 51.07215079812586,
+      "max_approach": -55.23083027263147,
+      "max_recede": 84.98985225182919
+    },
+    "micro_doppler_shift_hz_p95": 61.19724191845402,
+    "range_doppler_coupling_s": 0.23485714285714285,
+    "tracker": {
+      "gate_cm": [
+        10.0,
+        120.0
+      ],
+      "presence_min_cm": 15.0,
+      "kalman": "CV [r, v], z = r + kappa*v, sigma_a 600 cm/s^2, sigma_z 2.5 cm, gate 3 sigma & 15 cm, nearest-in-gate, coast <= 15 chirps with velocity x0.9/chirp, init 4 chirps within 10 cm (6 when beyond 35 cm)"
+    },
+    "sweep_0_4s": {
+      "coverage": 1.0,
+      "updated": 0.9191919191919192,
+      "range_cm": [
+        3.2951465319958047,
+        70.62629015721777
+      ]
+    },
+    "hold_4s_end": {
+      "coverage": 1.0,
+      "updated": 0.7272727272727273,
+      "range_cm": [
+        19.55994966538322,
+        32.8461074473044
+      ]
+    }
+  },
+  "respiration": {
+    "hold_window_s": [
+      5.96,
+      7.96
+    ],
+    "motion_bursts_s": [],
+    "bin_cm": 24.5,
+    "target_level_db_re_direct": -26.960030171932303,
+    "window_s": 2.0,
+    "filter": "detrend + low-pass",
+    "bpm": 18.49365234375,
+    "bpm_from_peaks": null,
+    "bpm_from_spectrum": 18.49365234375,
+    "cycles_observed": 0.616455078125,
+    "confidence": "low",
+    "peak_to_peak_mm": 3.8539244529219454,
+    "inhalation_peaks_s": [
+      0.88
+    ],
+    "bins_combined_cm": [
+      22.05,
+      24.5,
+      26.950000000000003
+    ],
+    "summed_amplitude_vs_centre_bin_db": 9.592256969267813,
+    "arc_centre_fit": true,
+    "arc_span_rad": 3.9306873131243583,
+    "arc_radial_residual": 0.1620746020149785,
+    "clamped_steps": 0,
+    "clamped_fraction": 0.0,
+    "amplitude_gated_steps": 1,
+    "max_phase_step_rad": 0.6484204208725275,
+    "unreferenced_peak_to_peak_mm": 3.383804939077081,
+    "static_reflector_cm": 240.10000000000002,
+    "static_reflector_coherence": 0.9911330996281011,
+    "static_reflector_jitter_mm_rms": {
+      "referenced": 0.17561425236682232,
+      "unreferenced": 0.39169705786192216
+    },
+    "lambda_mm": 16.690997566909978,
+    "rad_per_mm": 0.7528831373909066
+  },
+  "ne_range_conv": {
+    "frames": 398,
+    "bank_size": 64,
+    "bank_conv_device": "NeuralEngine",
+    "bank_calls": 7,
+    "bank_total_ms": 3.3219,
+    "bank_chirps_per_s": 119810.3752,
+    "single_conv_device": "CPU",
+    "single_total_ms": 24.8341,
+    "single_us_per_chirp": 62.3972,
+    "rel_err_vs_fp64": 0.0002,
+    "realtime_factor": 2408.2487
+  },
+  "ne_fused_range_doppler_cube": {
+    "maps": 14,
+    "block_chirps": 64,
+    "hop_chirps": 10,
+    "batch_per_call": 16,
+    "ne_call_ms": 3.416,
+    "all_ops_on_ne": true,
+    "doppler_unambiguous_cm_s": 10.432,
+    "most_active_block_centre_s": 4.08,
+    "most_active_peak_range_cm": 22.05,
+    "most_active_peak_doppler_hz": -8.203
+  },
+  "fused_benchmark_B16": {
+    "ne_us": 1103.0,
+    "accelerate_gemm_us": 1839.7,
+    "ne_speedup_vs_gemm": 1.67,
+    "cpu_offload_vs_gemm_pct": 50.7,
+    "all_ops_on_ne": true
+  },
+  "realtime_stream": {
+    "source": "audio",
+    "seconds": 8.45,
+    "frames": 172,
+    "fps": 22.313108074461933,
+    "dropped_blocks": 0,
+    "direct_path_offset_samples": 909,
+    "drift_recalibrations": 1,
+    "ne_conv_device": "NeuralEngine",
+    "ne_bank": 8,
+    "ne_call_ms_p50": 0.7239169790409505,
+    "latency_ms_p50": 11.17097950191237,
+    "latency_ms_p95": 13.908672926481811,
+    "latency_ms_max": 18.048125028144568,
+    "last_range_cm": null,
+    "last_bpm": null,
+    "last_resp_state": "motion",
+    "last_breath_pp_mm": 19.105876242462386
+  },
+  "tracker_validation": {
+    "17200-20700Hz": {
+      "sim_hand_-28dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.08108108108108109,
+        "range_rms_cm": 3.416546432437061,
+        "range_bias_cm": -0.014395518113185311,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_hand_-36dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.11486486486486487,
+        "range_rms_cm": 1.970339877439421,
+        "range_bias_cm": -0.0595386595870276,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_no_hand_seed1": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed2": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed3": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "phase1_wav_replay": {
+        "coverage": 0.8513513513513513,
+        "updated": 0.7027027027027027,
+        "coasted": 0.14864864864864866,
+        "segments": 2,
+        "updates_from_presence_path": 0.2403846153846154,
+        "range_cm": [
+          11.879810388130249,
+          21.919718149417477,
+          68.43279476078554
+        ]
+      }
+    },
+    "18800-22300Hz": {
+      "sim_hand_-28dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.02027027027027027,
+        "range_rms_cm": 4.162674324254472,
+        "range_bias_cm": -0.3977189627990417,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_hand_-36dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.17567567567567569,
+        "range_rms_cm": 2.6273491464158707,
+        "range_bias_cm": -0.5756987172372745,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_no_hand_seed1": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed2": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed3": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed4": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed5": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed6": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed7": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed8": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed9": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed10": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "phase3_wav_replay": {
+        "coverage": 0.8716216216216216,
+        "updated": 0.7905405405405406,
+        "coasted": 0.08108108108108109,
+        "segments": 2,
+        "updates_from_presence_path": 0.27350427350427353,
+        "range_cm": [
+          21.15727809881986,
+          41.23534201459162,
+          74.1314686150067
+        ]
+      }
+    }
+  },
+  "artifacts": {
+    "dashboard": "artifacts/phase3_ane_sonar_proof.png",
+    "telemetry": "artifacts/phase3_telemetry.json",
+    "capture_wav": "artifacts/phase3_capture.wav",
+    "fused_benchmark": "artifacts/ane_fused_benchmark.json",
+    "tracker_validation": "artifacts/phase2_tracker_validation.json"
+  }
+}

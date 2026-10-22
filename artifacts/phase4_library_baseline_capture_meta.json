@@ -1,0 +1,22 @@
+{
+  "tx_start_in": 194880,
+  "lead": 4800,
+  "audio": {
+    "mic": "MacBook Air Microphone",
+    "speaker": "MacBook Air Speakers",
+    "saved_volume": "0",
+    "restored_volume": "0",
+    "test_volume": 75,
+    "stream": "warm duplex (opened before a silent on-screen countdown)",
+    "audible_cues": "none (library mode: no say, no spoken cue, no bell)",
+    "callback_status_flags": 0,
+    "session_s": 13.88,
+    "rec_peak_dbfs": -9.74264144897461
+  },
+  "seconds": 6.0,
+  "sweep_s": 6.0,
+  "n_pri": 150,
+  "mode": "library_baseline",
+  "protocol": "Hands OFF the keyboard and screen - sit normally, don't reach in",
+  "captured_at": "2026-10-21T22:45:02"
+}

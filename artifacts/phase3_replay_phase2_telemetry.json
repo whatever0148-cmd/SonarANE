@@ -1,0 +1,363 @@
+{
+  "phase": "SonarANE Phase 3",
+  "source": "replay of artifacts/phase2_capture.wav",
+  "captured_at": "2026-10-21T11:05:10",
+  "timestamp": "2026-10-21T11:27:38",
+  "host": {
+    "machine": "MacBook Air M2",
+    "macos": "27.0.1",
+    "coremltools": "9.0"
+  },
+  "dsp": {
+    "fs": 48000,
+    "f0": 18800.0,
+    "f1": 22300.0,
+    "T_chirp_s": 0.04,
+    "chirps": 150,
+    "range_res_cm": 4.9,
+    "range_grid_cm": 2.45,
+    "lambda_mm": 16.690997566909978
+  },
+  "protocol": {
+    "sweep_s": [
+      0.0,
+      4.0
+    ],
+    "hold_s": [
+      4.0,
+      6.0
+    ],
+    "respiration_window_from_s": 4.1,
+    "settle": "first 0.4 s with |v| < 5 cm/s after cue"
+  },
+  "audio": {
+    "mic": "MacBook Air Microphone",
+    "speaker": "MacBook Air Speakers",
+    "default_output": "MacBook Air Speakers",
+    "osascript_volume_targets_speaker": true,
+    "saved_volume": "56",
+    "saved_muted": "false",
+    "test_volume": 75,
+    "restored_volume": "56",
+    "tx_samples": 321600,
+    "lead_samples": 4800,
+    "announce": "Get a flat palm or book ready 15 centimeters from the screen. Move out to 55, pause, then back. Starting in 3, 2, 1, move now",
+    "rec_peak_dbfs": -13.25706672668457
+  },
+  "capture_attempts": [
+    {
+      "config": {
+        "tukey_alpha": 0.15,
+        "amp": 0.9
+      },
+      "band_snr_db": 62.39,
+      "align_pmr_db": 47.83,
+      "gates": {
+        "snr": true,
+        "alignment": true,
+        "no_clip": true
+      }
+    }
+  ],
+  "spectrum": {
+    "band_snr_db": 62.39,
+    "band_vs_out_of_band_db": 53.22,
+    "band_power_dbfs": -60.94,
+    "noise_floor_dbfs": -123.32,
+    "noise_ref_seconds": 0.34
+  },
+  "alignment": {
+    "latency_samples": 5250,
+    "latency_ms": 109.375,
+    "period_fit_samples": 1920.01,
+    "clock_drift_ppm": 5.244,
+    "jitter_samples_rms": 0.393,
+    "peak_to_median_db": 47.833,
+    "frames_in_bounds": true
+  },
+  "tracking": {
+    "static_strongest_reflectors_cm": [
+      14.7,
+      245.0,
+      269.5
+    ],
+    "mti_direct_path_residual_db": -49.557045672041305,
+    "mti_floor_15_80cm_db": -53.34987854220154,
+    "presence_direct_path_residual_db": -49.24739005169047,
+    "presence_floor_15_80cm_db": -45.96556417846295,
+    "cfar_threshold_db": {
+      "near_db": 11.0,
+      "far_db": 8.0,
+      "taper_cm": [
+        35.0,
+        75.0
+      ],
+      "far_confirmation_chirps": 6,
+      "near_confirmation_chirps": 4
+    },
+    "chirps_with_candidates": 0.8108108108108109,
+    "track_coverage": 0.6621621621621622,
+    "track_updated": 0.6486486486486487,
+    "track_coasted": 0.013513513513513514,
+    "track_segments": 2,
+    "longest_segment_s": 3.52,
+    "updates_from_presence_path": 0.4479166666666667,
+    "zero_velocity_hold_s": 1.56,
+    "zero_velocity_updates_from_presence_path": 0.48717948717948717,
+    "motion_or_presence_snr_db": 25.84385111947189,
+    "hand_range_cm": {
+      "min": 14.269904157201783,
+      "median": 17.541480816173745,
+      "max": 40.78110383547592
+    },
+    "range_rate_cm_s": {
+      "p95_abs": 37.15609104447734,
+      "max_approach": -44.07792553738126,
+      "max_recede": 15.413138580280847
+    },
+    "micro_doppler_shift_hz_p95": 44.52231317574398,
+    "range_doppler_coupling_s": 0.23485714285714285,
+    "tracker": {
+      "gate_cm": [
+        10.0,
+        120.0
+      ],
+      "presence_min_cm": 15.0,
+      "kalman": "CV [r, v], z = r + kappa*v, sigma_a 400 cm/s^2, sigma_z 2.5 cm, gate 3 sigma & 15 cm, nearest-in-gate, coast <= 15 chirps, init 4 chirps within 10 cm"
+    },
+    "sweep_0_4s": {
+      "coverage": 0.494949494949495,
+      "updated": 0.47474747474747475,
+      "range_cm": [
+        15.530256728396287,
+        40.78110383547592
+      ]
+    },
+    "hold_4s_end": {
+      "coverage": 1.0,
+      "updated": 1.0,
+      "range_cm": [
+        14.269904157201783,
+        17.897993052806907
+      ]
+    }
+  },
+  "respiration": {
+    "hold_window_s": [
+      4.12,
+      6.0
+    ],
+    "bin_cm": 26.950000000000003,
+    "target_level_db_re_direct": -25.919485021489432,
+    "window_s": 1.88,
+    "filter": "detrend + low-pass",
+    "bpm": 24.35302734375,
+    "bpm_from_peaks": null,
+    "bpm_from_spectrum": 24.35302734375,
+    "cycles_observed": 0.7630615234375,
+    "confidence": "low",
+    "peak_to_peak_mm": 8.869640717353088,
+    "inhalation_peaks_s": [],
+    "arc_centre_fit": false,
+    "arc_span_rad": 7.470416487608183,
+    "arc_radial_residual": 0.31201604829693386,
+    "clutter_to_target_db": null,
+    "unreferenced_peak_to_peak_mm": 8.906153109694863,
+    "static_reflector_cm": 247.45,
+    "static_reflector_coherence": 0.969567278327939,
+    "static_reflector_jitter_mm_rms": {
+      "referenced": 0.3300766774918357,
+      "unreferenced": 0.3225558163665422
+    },
+    "lambda_mm": 16.690997566909978,
+    "rad_per_mm": 0.7528831373909066
+  },
+  "ne_range_conv": {
+    "frames": 298,
+    "bank_size": 64,
+    "bank_conv_device": "NeuralEngine",
+    "bank_calls": 5,
+    "bank_total_ms": 2.9906,
+    "bank_chirps_per_s": 99644.7236,
+    "single_conv_device": "CPU",
+    "single_total_ms": 21.1647,
+    "single_us_per_chirp": 71.0225,
+    "rel_err_vs_fp64": 0.0002,
+    "realtime_factor": 2006.2696
+  },
+  "ne_fused_range_doppler_cube": {
+    "maps": 11,
+    "block_chirps": 64,
+    "hop_chirps": 8,
+    "batch_per_call": 16,
+    "ne_call_ms": 2.813,
+    "all_ops_on_ne": true,
+    "doppler_unambiguous_cm_s": 10.432,
+    "most_active_block_centre_s": 3.84,
+    "most_active_peak_range_cm": 17.15,
+    "most_active_peak_doppler_hz": 12.109
+  },
+  "fused_benchmark_B16": {
+    "ne_us": 1103.0,
+    "accelerate_gemm_us": 1839.7,
+    "ne_speedup_vs_gemm": 1.67,
+    "cpu_offload_vs_gemm_pct": 50.7,
+    "all_ops_on_ne": true
+  },
+  "realtime_stream": {
+    "source": "audio",
+    "seconds": 8.45,
+    "frames": 172,
+    "fps": 22.313108074461933,
+    "dropped_blocks": 0,
+    "direct_path_offset_samples": 909,
+    "drift_recalibrations": 1,
+    "ne_conv_device": "NeuralEngine",
+    "ne_bank": 8,
+    "ne_call_ms_p50": 0.7239169790409505,
+    "latency_ms_p50": 11.17097950191237,
+    "latency_ms_p95": 13.908672926481811,
+    "latency_ms_max": 18.048125028144568,
+    "last_range_cm": null,
+    "last_bpm": null,
+    "last_resp_state": "motion",
+    "last_breath_pp_mm": 19.105876242462386
+  },
+  "tracker_validation": {
+    "17200-20700Hz": {
+      "sim_hand_-28dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.08108108108108109,
+        "range_rms_cm": 3.416546432437061,
+        "range_bias_cm": -0.014395518113185311,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_hand_-36dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.11486486486486487,
+        "range_rms_cm": 1.970339877439421,
+        "range_bias_cm": -0.0595386595870276,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_no_hand_seed1": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed2": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed3": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "phase1_wav_replay": {
+        "coverage": 0.8513513513513513,
+        "updated": 0.7027027027027027,
+        "coasted": 0.14864864864864866,
+        "segments": 2,
+        "updates_from_presence_path": 0.2403846153846154,
+        "range_cm": [
+          11.879810388130249,
+          21.919718149417477,
+          68.43279476078554
+        ]
+      }
+    },
+    "18800-22300Hz": {
+      "sim_hand_-28dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.02027027027027027,
+        "range_rms_cm": 4.162674324254472,
+        "range_bias_cm": -0.3977189627990417,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_hand_-36dB": {
+        "coverage": 1.0,
+        "updated": 1.0,
+        "coasted": 0.0,
+        "segments": 1,
+        "updates_from_presence_path": 0.17567567567567569,
+        "range_rms_cm": 2.6273491464158707,
+        "range_bias_cm": -0.5756987172372745,
+        "frac_err_gt_8cm": 0.0,
+        "pause_coverage": 1.0,
+        "pause_updated": 1.0
+      },
+      "sim_no_hand_seed1": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed2": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed3": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed4": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed5": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed6": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed7": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed8": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed9": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "sim_no_hand_seed10": {
+        "false_track_segments": 0,
+        "coverage": 0.0
+      },
+      "phase3_wav_replay": {
+        "coverage": 0.8716216216216216,
+        "updated": 0.7905405405405406,
+        "coasted": 0.08108108108108109,
+        "segments": 2,
+        "updates_from_presence_path": 0.27350427350427353,
+        "range_cm": [
+          21.15727809881986,
+          41.23534201459162,
+          74.1314686150067
+        ]
+      }
+    }
+  },
+  "artifacts": {
+    "dashboard": "artifacts/phase3_replay_phase2_ane_sonar_proof.png",
+    "telemetry": "artifacts/phase3_replay_phase2_telemetry.json",
+    "capture_wav": "artifacts/phase2_capture.wav",
+    "fused_benchmark": "artifacts/ane_fused_benchmark.json",
+    "tracker_validation": "artifacts/phase2_tracker_validation.json"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "mp4": "/Users/ahmed/SonarANE/artifacts/sonar_ane_demo.mp4",
+  "gif": "/Users/ahmed/SonarANE/artifacts/sonar_ane_demo.gif",
+  "fps": 60,
+  "frames": 2169,
+  "seconds": 36.15,
+  "render_s": 196.8,
+  "notes": "capture 1 cursor interpolated between 25 Hz rows; capture 2 breaths/min is a causal estimate on the data so far (wanders 9-18/min before ~22 s, then settles on the consensus)",
+  "capture_1": {
+    "hand_tracks": 2,
+    "hand_rows": 185,
+    "rows_after_preroll": 199,
+    "hand_coverage": 0.9296482412060302,
+    "seated_presence_detected": true,
+    "seated_presence_static_xy_cm": [
+      [
+        -3.0,
+        35.0
+      ],
+      [
+        14.0,
+        34.0
+      ]
+    ]
+  },
+  "capture_2": {
+    "bpm": 15.9691817313107,
+    "confidence": "high",
+    "peak_to_peak_mm": 6.264821692642125,
+    "cycles_observed": 6.983855477159879,
+    "bin_cm": 22.05
+  }
+}
