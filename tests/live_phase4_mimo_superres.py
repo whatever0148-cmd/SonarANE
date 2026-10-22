@@ -529,7 +529,8 @@ def main():
     srb = json.loads(sr.SR_JSON.read_text())
     st = an["stats"]
     kind = "library baseline (hands off)" if baseline else ("live sweep" if not args.from_wav else f"replay of {WAV.name}")
-    meta_line = (f"{kind}, {seconds:.0f} s, SILENT (no say / spoken cue) · TDM 16 ms up-chirps, L @ 0 / R @ 20 ms per "
+    cues = "spoken guidance (say) + window" if "spoken" in str(meta.get("protocol", "")) else "SILENT (no say / spoken cue)"
+    meta_line = (f"{kind}, {seconds:.0f} s, {cues} · TDM 16 ms up-chirps, L @ 0 / R @ 20 ms per "
                  f"40 ms, {fmcw.F0 / 1e3:.1f}–{fmcw.F1 / 1e3:.1f} kHz, amp {AMP}, vol {VOLUME}% · NE: range FFT + "
                  f"{sr.ITERS}-it FISTA ({st['ne']['graph_ops']} ops, all on NE: {st['ne']['all_on_ne']}) · "
                  f"{dt.datetime.now():%Y-%m-%d %H:%M}")

@@ -1,0 +1,23 @@
+{
+  "tx_start_in": 1273920,
+  "lead": 4800,
+  "audio": {
+    "mic": "MacBook Air Microphone",
+    "speaker": "MacBook Air Speakers",
+    "saved_volume": "69",
+    "restored_volume": "69",
+    "test_volume": 75,
+    "stream": "warm duplex (opened before a silent on-screen countdown)",
+    "audible_cues": "none (library mode: no say, no spoken cue, no bell)",
+    "callback_status_flags": 0,
+    "session_s": 40.09,
+    "rec_peak_dbfs": -0.9451246857643127
+  },
+  "seconds": 8.0,
+  "sweep_s": 8.0,
+  "preroll_s": 2.0,
+  "n_pri": 250,
+  "mode": "sweep",
+  "protocol": "2 s hands-in-lap pre-roll, then 8 s SWEEP NOTEBOOK NOW: left \u2194 right (\u221225..+25 cm) and in \u2194 out (12..45 cm) (spoken guidance)",
+  "captured_at": "2026-10-22T04:20:02"
+}
